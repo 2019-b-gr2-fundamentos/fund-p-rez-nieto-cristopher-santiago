@@ -7,7 +7,7 @@ Descripcion: ejemplos de variables primitivas em JS
 //Comentario
 
 
-//Primitivas (tipos de variables)
+//Tipos de variables PRIMITIVAS 
 /*
 int         -> Numero ENTERO            Ej: 5, -3, 0
 chart       -> Caracter                 Ej: a, b, c
@@ -37,4 +37,4 @@ let SUELDO = 0;
 
 /* <- abro bloque de comentario
 
-cierro bloque comentario -> */
+cierro bloque comentario/
