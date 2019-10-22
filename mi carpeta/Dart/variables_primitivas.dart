@@ -5,7 +5,7 @@ Fecha de actualizacion: 21/10/2019
 Descripcion: presentar las variables primitivas que presenta en lenguaje de programacion DART
 
 Variables primitivas
-  º numbres
+  º numbers
   º strings
   º booleans
   º lists
