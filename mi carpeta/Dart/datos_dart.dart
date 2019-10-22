@@ -24,5 +24,23 @@ Ejm: r"hola mundo \u2665. pero con caracteres especiales evadidos.\n ";
 Para tener varias líneas en la misma variable abrir y cerrar con tres comillas simples 
 
 LISTA
-En dart, los arreglos (arrays) son el objeto List
- 
+En dart, los arreglos (arrays) son el objeto List, por lo que se llaman listas
+List -> E es el tipo de dato que nuestra lista va a tener. se puede usar var para una lista con diferentes tipos de datos
+        Ejm: List<int> numeros = [0,1,1,2,3,5]
+        Ejm: List<int> numeros = new list(6);
+        Ejm: var lista = [1234, "hola", true, 3.1416];
+
+MAPAS
+Un mapa es u objeto que asocia una llave con un valor
+Map -> Donde K es el tipo de dato para la llave y V es el tipo de dato para el valor.
+        Ejm: Map<String, int> mapa ={
+          'uno': 1
+        };
+        Ejm: var mapa = {
+                'uno': 1
+        };
+
+FINAL Y CONST -> sirve para declarar a una variable como Inmutable, como los es const en TypeScript
+STATIC
+/** */
+*/
