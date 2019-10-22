@@ -1,3 +1,3 @@
 var nombre = "Cristopher";
 const IVA = 12;
-final edad = 19;
+var String = [213,"hola mundo"]
