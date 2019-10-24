@@ -1,5 +1,5 @@
 const numeroUno = 1; //camelCase
-const numeroDos = 2; 
+const numeroDos = 2;
 let resultado = 0;
 //SUMA
 resultado = 1 + 2;
@@ -15,32 +15,10 @@ resultado = 1 ^ 2;
 resultado = 4 % 2; //0 -> RESIDUO
 resultado = 4 % 3; //1 -> RESIDUO
 resultado = 7 % 3; //1 -> RESIDUO
-
 console.log("pera" + 2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //NUMEROUNO    -> TODO MAYUSCULAS (NO SEPARACIONES)
 //NUMERO_UNO   -> MAYUSCULAS GUION BAJO
 //NumeroUno    -> Primera letra de cada Palabra Empieza Con Mayuscula
 //numerouno
 //numero_uno   -> Python
-//numerounO
+//numerounO 

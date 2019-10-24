@@ -41,7 +41,11 @@
       <option name="presentableId" value="Default" />
       <updated>1571866502201</updated>
       <workItem from="1571866505432" duration="360000" />
+<<<<<<< HEAD
       <workItem from="1571867040013" duration="1461000" />
+=======
+      <workItem from="1571867040013" duration="2077000" />
+>>>>>>> Desarrollo
     </task>
     <servers />
   </component>
@@ -50,6 +54,10 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/mi carpeta/02-variables-tp.js" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/mi carpeta/03-numeros-strings.js" />
+>>>>>>> Desarrollo
       </list>
     </option>
   </component>
