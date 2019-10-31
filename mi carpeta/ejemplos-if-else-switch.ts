@@ -63,7 +63,7 @@ const demasiadaAgua = aguita > 6 && aguita <= 10;
 const deporte = Number(ejercicioString);
 const deporteSaludable = deporte >= 30 && deporte <= 60;
 const deporteNoTanSaludable1 = deporte < 30 && deporte >= 10;
-const deporteNoTanSaludable2 = deporte >= 60 && deporte <= 120;
+const deporteNoTanSaludable2 = deporte > 60 && deporte <= 120;
 const deporteNoTanSaludable = deporteNoTanSaludable1 || deporteNoTanSaludable2;
 const deporteNadaSaludable = deporte >= 0 && deporte <= 10;
 const demasiadoDeporte = deporte > 120 && deporte <= 180;
@@ -89,7 +89,7 @@ if (aguaSaludable && deporteSaludable){
 if (aguaNadaSaludable && deporteNadaSaludable){
     console.log("Debería cuidar mejor su salud");
 }else {
-if (demasiadoDeporte && demasiadaAgua){
+if (demasiadaAgua && demasiadoDeporte){
     console.log("Usted es una persona sana, pero modere sus horas de ejercicio y su consumo de agua");
 }else {
 if (aguaSaludable && demasiadoDeporte){
@@ -119,7 +119,11 @@ if (aguaSaludable && deporteNadaSaludable){
 if (aguaNadaSaludable && deporteSaludable){
     console.log("Consuma mas agua");
 }else {
+if (demasiadaAgua && deporteNoTanSaludable){
+    console.log("Usted consume demasiada agua");
+}else {
     console.log("Intente de nuevo");
+}
 }
 }
 }
@@ -136,5 +140,4 @@ if (aguaNadaSaludable && deporteSaludable){
 }
 }
 }
-
 
