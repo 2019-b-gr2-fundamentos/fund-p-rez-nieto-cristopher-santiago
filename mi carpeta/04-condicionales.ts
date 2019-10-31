@@ -128,9 +128,67 @@ if(seAtrasoAClase){
 
 */
 
+// TRUTY // FALSY
+
+const nombreVacio = "";
+if(undefined){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+}
 
 
+const calculo = "multiplicar"; // sumar restar multiplicar y dividir
+switch(calculo){
+    case "sumar": // compara 1 vez
+        break;
+    case "restar": //compara 2 veces
+        break;
+    case "multiplicar": // compara 3 veces 
+        break;
+    case "dividir": //compara 4 veces
+        break;
+    default:
+}
 
+// 6 Guagua
+// 18 Guambra
+// 65 Longo
+// 66 Ruku
+
+/*
+const edadString = prompt("Ingresar numero");
+const edad = Number(edadString);
+switch(edad) {
+    case edad > 0 && edad <= 6:
+        console.log("guagua");
+        break;
+    case edad > 6 && edad <= 18:
+        console.log("guambra");
+        break;
+// NO SIRVE EL SWITCH PARA ESTOS CASOS. SOLO SIRVE PARA CASOS ESPECÍFICOS 
+}
+
+*/
+const edadString = prompt("Ingresar Edad");
+const edad = Number(edadString);
+if (edad > 0 && edad <= 6){
+    console.log("guagua");
+}else {
+if (edad > 6 && edad <= 18){
+    console.log("guambra");
+}else {
+if (edad > 18 && edad <= 65){
+    console.log("longo");
+}else {
+if (edad >= 66 && edad <150){
+    console.log("ruku");
+}else {
+if (edad <= 0){
+    console.log("Usted está en planes de nacer");
+}else {(edad >= 150);
+    console.log("USTED ES DON ALFONSO");
+}}}}}
 
 
 
