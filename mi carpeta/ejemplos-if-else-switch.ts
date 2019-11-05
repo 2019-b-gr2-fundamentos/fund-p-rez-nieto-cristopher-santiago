@@ -141,3 +141,71 @@ if (demasiadaAgua && deporteNoTanSaludable){
 }
 }
 
+// Programa para saber a que Universidad debes asistir
+const profesionString = prompt("¿Cual es la profesion que desea seguir?");
+const profesionUno = String(profesionString);
+switch(profesionUno){
+    case "doctor" || "médico" || "abogado" || "economista" || "contador":
+        console.log("Universidad Central del Ecuador");
+        break;
+    case "ingeniero" || "tecnologo":
+        console.log("Escuela Politécnica Nacional (recomendada) o Escuela Politecnica del Ejercito");
+        break;
+    case "piloto comercial":
+        console.log("Institutos Especializados en Aviacion");
+        break;
+    case "piloto de combate":
+        console.log("Fuerza Aerea Ecuatoriana");
+        break;
+    case " ":
+        console.log("Inserte una profesion");
+        break;
+    case "solo quiero un titulo":
+        console.log("Universidad Politecnica Salesiana");
+        break;
+    case "solo quiero tomar un traguito":
+        console.log("Universidad Tecnologica Equinoccial");
+        break;
+    case "soy niño rico pero no tanto":
+        console.log("Universidad de las Americas");
+        break;
+    case "soy muy rico y mis padres ya me consiguieron trabajo":
+        console.log("Universidad San Francisco");
+        break;
+    case "nada":
+        console.log("Universidad Politecnica Salesiana");
+        break;
+}
+
+// programa para saber si tus papas te quieren
+const lugarString = prompt("Ingrese el lugar que ocupa entre sus hermanos (mayor, menor o el del medio)");
+const lugarHermanos = String(lugarString);
+switch(lugarHermanos){
+    case "mayor":
+        console.log("Tus papas no te paran mucha bola, pero te quieren un poco");
+        break;
+    case "menor":
+        console.log("Tus papas te adoran demasiado");
+        break;
+    case "el del medio":
+        console.log("Tus papas no te quieren tanto como a los otros :'v");
+        break;
+}
+
+// programa para cualquier cosa
+const consolaString = prompt("¿Que tipo de videojuego juegas?");
+const juegoChido = String(consolaString);
+switch(juegoChido){
+    case "fortnite":
+        console.log("Agrega xD: Maferton_2000");
+        break;
+    case "call of duty":
+        console.log("Chevere, ponte un CoD Mobile");
+        break;
+    case "free fire":
+        console.log("Que RATAAAAAA >:v");
+        break;
+    case "pubg":
+        console.log("Debrías cambiar de juego xd");
+        break;
+}
