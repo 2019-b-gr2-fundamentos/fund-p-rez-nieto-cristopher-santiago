@@ -140,13 +140,13 @@ if(undefined){
 
 const calculo = "multiplicar"; // sumar restar multiplicar y dividir
 switch(calculo){
-    case "sumar": // compara 1 vez
+    case " ": // compara 1 vez
         break;
-    case "restar": //compara 2 veces
+    case " ": //compara 2 veces
         break;
-    case "multiplicar": // compara 3 veces 
+    case " ": // compara 3 veces 
         break;
-    case "dividir": //compara 4 veces
+    case " ": //compara 4 veces
         break;
     default:
 }
