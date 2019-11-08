@@ -1,6 +1,6 @@
 // Variables primitivas 
-const numero = 10
-const decimal = 10.12
+const numer = 10
+const decima = 10.12
 const respuestaTipoNumero = typeof numero;
 console.log(respuestaTipoNumero)
 console.log(typeof decimal);
