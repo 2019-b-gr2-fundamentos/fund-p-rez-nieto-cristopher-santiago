@@ -18,10 +18,7 @@ resultado = 7 % 3; //1 -> RESIDUO
 
 console.log("pera" + 2);
 
-// STRINGS \"Adios Mundo\"
-const mensaje = "\"Hola Mundo\"";
-const saludo = "\"Adios Mundo\"";
-console.log(mensaje + "\n" + saludo);
+
 
 
 
