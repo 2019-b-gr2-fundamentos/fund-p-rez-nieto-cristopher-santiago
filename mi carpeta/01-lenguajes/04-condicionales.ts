@@ -138,15 +138,16 @@ if(undefined){
 }
 
 
-const calculo = "multiplicar"; // sumar restar multiplicar y dividir
-switch(calculo){
-    case " ": // compara 1 vez
+let calculoString = prompt("Que operacion desea realizar"); // sumar restar multiplicar y dividir
+const calculoNombre = String(calculoString);
+switch(calculoNombre){
+    case "sumar": // compara 1 vez
         break;
-    case " ": //compara 2 veces
+    case "restar": //compara 2 veces
         break;
-    case " ": // compara 3 veces 
+    case "multiplicar": // compara 3 veces 
         break;
-    case " ": //compara 4 veces
+    case "dividir": //compara 4 veces
         break;
     default:
 }
@@ -171,7 +172,7 @@ switch(edad) {
 
 */
 const edadString = prompt("Ingresar Edad");
-const edad = Number(edadString);
+const edadUno = Number(edadString);
 if (edad > 0 && edad <= 6){
     console.log("guagua");
 }else {
