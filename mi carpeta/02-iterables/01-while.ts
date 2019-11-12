@@ -20,7 +20,6 @@ do{
 } while(vecesQueHeComido < 3)
 
 while(vecesQueHeComido < 3){
-
     console.log('Vamos a comer');
     vecesQueHeComido = 0;
     vecesQueHeComido = vecesQueHeComido + 1;
