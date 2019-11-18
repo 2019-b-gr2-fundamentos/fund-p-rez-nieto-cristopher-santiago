@@ -15,8 +15,9 @@ Math.floor(Math.random() * 11) // -> genera un numero random de 0 a 10 // [0 , 1
 
 
 
-for (const arreglo = []; arreglo.push(Math.floor(Math.random() * 2)) <= 5;){
-for (const arreglo = []; ){
+const numeroDeJugadores = 5;
+for (const arreglo = []; arreglo.push(Math.floor(Math.random() * 2)) <= numeroDeJugadores;){
+    
+    console.log(arreglo);
 
-}
 }
