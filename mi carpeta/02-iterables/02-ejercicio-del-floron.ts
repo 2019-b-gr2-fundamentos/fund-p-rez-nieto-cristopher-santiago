@@ -15,8 +15,30 @@ Math.floor(Math.random() * 11) // -> genera un numero random de 0 a 10 // [0 , 1
 
 
 
-for (const arreglo = []; arreglo.push(Math.floor(Math.random() * 2)) <= 5;){
-for (const arreglo = []; ){
+const numeroDeJugadores = 5;
+const indicePrimerElemento = 0;
+const indiceSegundoElemento = 1;
+const indiceTercerElemento = 2;
+const indiceCuartoElemento = 3;
+const indiceQuintoElemento = 4;
 
-}
-}
+for (const arreglo = []; arreglo.push(Math.floor(Math.random() * 2)) <= numeroDeJugadores;){
+    if (arreglo[indicePrimerElemento] == 0 && arreglo[indiceSegundoElemento] == 0 && arreglo[indiceTercerElemento] == 0 && arreglo[indiceCuartoElemento] == 0 && arreglo[indiceQuintoElemento] == 0 ){
+        console.log('Intente de nuevo');
+    }else{
+            console.log(arreglo);
+        }
+        }
+    
+
+
+/*
+const arreglo = [200, 2, 3];
+const indicePrimerElemento = 0;
+const indiceSegundoElemento = 1;
+const indiceTercerElemento = 2;
+arreglo[indicePrimerElemento];
+arreglo[indiceSegundoElemento];
+arreglo[indiceTercerElemento];
+console.log(arreglo[indicePrimerElemento]);
+*/
