@@ -1,5 +1,5 @@
 // 1) crear un arreglo de 5 elementos
-var arregloss = [];
+var arreglosss = [];
 // 2) cada elemento va a ser un 1 o un 0
 // ej: [0, 0, 1, 1, 0]
 // 3) exista al menos un elemento "1"
@@ -15,7 +15,9 @@ var indiceCuartoElemento = 3;
 var indiceQuintoElemento = 4;
 for (var arreglo = []; arreglo.push(Math.floor(Math.random() * 2)) <= numeroDeJugadores;) {
     if (arreglo[indicePrimerElemento] == 0 && arreglo[indiceSegundoElemento] == 0 && arreglo[indiceTercerElemento] == 0 && arreglo[indiceCuartoElemento] == 0 && arreglo[indiceQuintoElemento] == 0) {
-        console.log('Intente de nuevo');
+        for (var arreglo_1 = []; arreglo_1.push(Math.floor(Math.random() * 2)) <= numeroDeJugadores;) {
+            console.log(arreglo_1);
+        }
     }
     else {
         console.log(arreglo);
@@ -30,4 +32,12 @@ arreglo[indicePrimerElemento];
 arreglo[indiceSegundoElemento];
 arreglo[indiceTercerElemento];
 console.log(arreglo[indicePrimerElemento]);
-*/ 
+*/
+/*
+1) crear un erreglo de 5 jugadores
+2) cada elemento del arreglo debe ser un numero aleatorio entre 0 y 1
+
+
+
+
+*/
