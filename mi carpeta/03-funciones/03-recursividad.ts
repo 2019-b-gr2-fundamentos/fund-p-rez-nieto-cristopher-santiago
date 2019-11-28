@@ -18,7 +18,6 @@ function imprimirMensajeNVeces(
 
 
 
-
 const arreglo1 = [1,2,3,4,5];
 console.log(arreglo1);
 function recorrerUnArreglo(arreglo1: number[], indiceDeElementos:number): void{
@@ -39,9 +38,6 @@ function main(){
 1) cuantos elementos tiene el arreglo
 2) imprimir el arreglo
 3) seleccionar el primer elemento
-
-
-
 
 
 
