@@ -69,6 +69,6 @@ const fourthPlayerIndex = 3;
 const fifthPlayerIndex = 4;
 const cualquierIndice = firstPlayerIndex || secondPlayerIndex || thirdPlayerIndex || fourthPlayerIndex || fifthPlayerIndex;
 
-for (const array = []; arreglo.push(Math.floor(Math.random() * arreglo[first])))
+//for (const array = []; arreglo.push(Math.floor(Math.random() * arreglo[first])))
 
 
