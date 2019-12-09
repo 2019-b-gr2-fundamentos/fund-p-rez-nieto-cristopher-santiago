@@ -1,20 +1,29 @@
-int sumar(int numeroUno, int numeroDos){
+import 'dart:ffi';
+import 'dart:io'; // habilita operaciones, como la de ingresar datos desde el teclado.
+
+double sumar(double numeroUno, double numeroDos){
   return numeroUno + numeroDos;
 }
-int restar(int numeroUno, int numeroDos){
+double restar(double numeroUno, double numeroDos){
   return numeroUno - numeroDos;
 }
-int multiplicar(int numeroUno, int numeroDos){
+double multiplicar(double numeroUno, double numeroDos){
   return numeroUno * numeroDos;
 }
-double dividir(int numeroUno, int numeroDos){
+double dividir(double numeroUno, double numeroDos){
   return numeroUno / numeroDos;
 }
 
-void main(){
+double pitagoras(double numeroUno, double numeroDos){
+  return Math.sqrt(numeroUno * numeroUno + numeroDos * numeroDos);
+}
+
+main(){
   calculadora();
 }
 
-void calculadora(){
+calculadora(){
   
+  stdout.write("Seleccione una operacion");
+
 }
