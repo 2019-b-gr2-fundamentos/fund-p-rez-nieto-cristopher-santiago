@@ -8,9 +8,9 @@ function imprimirMensajeNVeces(mensaje, numeroVeces) {
         imprimirMensajeNVeces(mensaje, nuevoNumeroVeces);
     }
 }
-//function main(){
-//   imprimirMensajeNVeces('hola', 3);
-//}
+function main() {
+    imprimirMensajeNVeces('hola', 3);
+}
 var arreglo1 = [1, 2, 3, 4, 5];
 console.log(arreglo1);
 function recorrerUnArreglo(arreglo1, indiceDeElementos) {
@@ -23,16 +23,14 @@ function recorrerUnArreglo(arreglo1, indiceDeElementos) {
         console.log('Se han impreso todos los elementos');
     }
 }
-function main() {
+/*function main(){
     recorrerUnArreglo(arreglo1, 0);
 }
+
 /*
 1) cuantos elementos tiene el arreglo
 2) imprimir el arreglo
 3) seleccionar el primer elemento
-
-
-
 
 
 
