@@ -12,9 +12,9 @@ function imprimirMensajeNVeces(
 
 }
 
-//function main(){
-//   imprimirMensajeNVeces('hola', 3);
-//}
+function main(){
+   imprimirMensajeNVeces('hola', 3);
+}
 
 
 
@@ -30,7 +30,7 @@ function recorrerUnArreglo(arreglo1: number[], indiceDeElementos:number): void{
     }
         
 }
-function main(){
+/*function main(){
     recorrerUnArreglo(arreglo1, 0);
 }
 
