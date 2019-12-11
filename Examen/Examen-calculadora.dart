@@ -60,7 +60,7 @@ main() {
      print('Bienvenido a la calculadora mas chevere del mundo :)');
      print('Estos son los numeros asignados para cada operacion');
      print('OPERACIONES BASICAS: 1-suma, 2-resta, 3-multiplicacion, 4-division'); 
-     print('CONVERSORES DE GRADOS: 5-transformar de sexagesimal a radian, 5-transformar de radian a sexagesimal');
+     print('CONVERSORES DE GRADOS: 5-transformar de sexagesimal a radian, 6-transformar de radian a sexagesimal');
      print('OTRAS OPERACIONES'); 
      print('7-volumen de una esfera');
      print('8-hipotenusa de un triangulo rectangulo');
