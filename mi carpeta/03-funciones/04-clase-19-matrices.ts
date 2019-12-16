@@ -3,6 +3,12 @@ const arregloMatriz = [
     [3,4,5],
     [6,7,8],
     [9],
+]
+
+
+function compararMatrices(
+    matrizUno: number[][],
+    matrizDos: number[][]
 ): boolean {
    return true; 
 }
