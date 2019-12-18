@@ -42,7 +42,7 @@ function obtenerSegundaDimension(matrizUno: number[][]):number | false{
         }// PROBAR
     }
 }
-return false
+return false; 
 }
 
 function verificarTodosLosElementosDeUnArregloSonArreglos(
