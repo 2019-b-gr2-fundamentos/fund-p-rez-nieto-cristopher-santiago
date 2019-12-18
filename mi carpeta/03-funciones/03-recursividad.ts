@@ -12,7 +12,7 @@ function imprimirMensajeNVeces(
 
 }
 
-function main(){
+function mainM(){
    imprimirMensajeNVeces('hola', 3);
 }
 
