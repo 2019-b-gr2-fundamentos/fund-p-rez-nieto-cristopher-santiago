@@ -69,16 +69,17 @@ function verificarTodosLosElementosDeUnArregloSonArreglos(arreglo) {
     return true;
 }
 function main() {
-    var matrizUno = [
+    var x = [
         [1, 2],
         [1]
     ];
-    var matrizDos = [
+    var y = [
         [1, 2],
         [3, 4]
     ];
-    compararMatrices(matrizUno, matrizDos);
+    compararMatrices(x, y);
 }
+main();
 /* function verificarTamañoDeCadaArregloDentroDelArreglo(matrizUno: number[][]):boolean{
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglos(matrizUno);
     const longitudPrimerArreglo = matrizUno[0].length;

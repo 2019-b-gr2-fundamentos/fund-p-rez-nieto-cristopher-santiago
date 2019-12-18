@@ -90,6 +90,8 @@ function main(){
 }
 
 
+main();
+
 
 /* function verificarTamañoDeCadaArregloDentroDelArreglo(matrizUno: number[][]):boolean{
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglos(matrizUno);
