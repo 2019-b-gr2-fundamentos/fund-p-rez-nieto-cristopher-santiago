@@ -142,7 +142,11 @@ function main(){
         [3,3,3]
     ];
     const resultado = compararMatriz(x, y);
-    console.log('Resultado: ', resultado);
+    if(resultado != true){
+        console.log('Las matrices NO son iguales');
+    }else{
+        console.log('Las matrices son iguales');
+    }
 }
 
 main();

@@ -116,6 +116,13 @@ function main() {
         [3, 3, 3]
     ];
     var resultado = compararMatriz(x, y);
-    console.log('Resultado: ', resultado);
+    console.log("Matriz 1 = " + x);
+    console.log("Matriz 2 = " + y);
+    if (resultado != true) {
+        console.log('Las matrices NO son iguales');
+    }
+    else {
+        console.log('Las matrices son iguales =)');
+    }
 }
 main();
