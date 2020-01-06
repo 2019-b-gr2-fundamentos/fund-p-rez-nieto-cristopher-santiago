@@ -1,0 +1,17 @@
+{
+  "name": "libreria_cris",
+  "version": "1.0.0",
+  "description": "Libreria de fundamentos de progra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fundamentos",
+    "epn",
+    "libreria",
+    "ejemplo"
+  ],
+  "author": "Cristopher Perez",
+  "license": "ISC"
+}
