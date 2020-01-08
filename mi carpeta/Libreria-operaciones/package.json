@@ -1,0 +1,20 @@
+{
+  "name": "libreria-operaciones",
+  "version": "1.0.0",
+  "description": "operaciones basicas de calculadora",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "epn",
+    "suma",
+    "calculadora",
+    "resta",
+    "multiplicacion",
+    "division"
+  ],
+  "author": "Cristopher Perez",
+  "license": "ISC",
+  "dependencies": {}
+}

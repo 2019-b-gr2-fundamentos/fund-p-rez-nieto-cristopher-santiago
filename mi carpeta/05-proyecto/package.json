@@ -1,7 +1,7 @@
 {
-  "name": "05-proyecto",
+  "name": "op-basicas",
   "version": "1.0.0",
-  "description": "",
+  "description": "operaciones basicas de una calculadora ",
   "main": "index.js",
   "scripts": {
     "empezar": "(tsc index.ts || echo) && node index.js"
@@ -9,6 +9,20 @@
   "author": "cristopher perez",
   "license": "ISC",
   "dependencies": {
-    "libreria_cris": "^1.0.0"
-  }
+    "libreria_cris": "^1.0.0",
+    "libreria_operations": "^1.2.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "operaciones",
+    "epn",
+    "calculadora",
+    "suma",
+    "resta",
+    "multiplicacion",
+    "division",
+    "promedio",
+    "volumen",
+    "iva"
+  ]
 }
