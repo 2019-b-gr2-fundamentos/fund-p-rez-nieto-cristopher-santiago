@@ -9,6 +9,7 @@ import * as divisionDeber from 'libreria_operations/basic-operations/division2';
 import * as ivaDeber from 'libreria_operations/basic-operations/iva2';
 import * as volumenDeber from 'libreria_operations/basic-operations/vol2';
 import * as promedioDeber from 'libreria_operations/basic-operations/promed';
+import * as PI from 'libreria_operations/basic-operations/pi';
 
 const respuestaSuma = sumaDeber(1,2);
 console.log('La respuesta para la suma de 1 + 2 es', respuestaSuma);
@@ -30,3 +31,5 @@ console.log('El promedio entre 20 y 10 es', respuestaPromedio);
 
 const respuestaVolumen = volumenDeber(10);
 console.log('el volumen de una esfera de radio 10 es', respuestaVolumen); 
+
+console.log('La constante pi es:', PI);
