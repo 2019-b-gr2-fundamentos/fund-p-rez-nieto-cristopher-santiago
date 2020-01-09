@@ -29,4 +29,4 @@ const respuestaPromedio = promedioDeber(20,10);
 console.log('El promedio entre 20 y 10 es', respuestaPromedio); 
 
 const respuestaVolumen = volumenDeber(10);
-console.log('el volumen de una esfera de radio 10 es', respuestaMultiplicacion); 
+console.log('el volumen de una esfera de radio 10 es', respuestaVolumen); 

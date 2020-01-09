@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "libreria_cris": "^1.0.0",
-    "libreria_operations": "^1.2.0"
+    "libreria_operations": "^1.3.0"
   },
   "devDependencies": {},
   "keywords": [
