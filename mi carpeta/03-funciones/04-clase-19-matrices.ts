@@ -123,7 +123,7 @@ function verificarTodosLosElementosDeUnArregloSonArreglo(
     for(let i = 0; i < arreglo.length; i++){
         const elementoActual = arreglo[i];
         const esUnArreglo = typeof elementoActual == 'object' &&
-        elementoActual.indexOf; // Truty
+                            elementoActual.indexOf; // Truty
         if(!esUnArreglo){
             return false;
         }
@@ -139,7 +139,7 @@ function main(){
     ];
     const y = [
         [1,2,3],
-        [3,3,3]
+        [3,3,2]
     ];
     const resultado = compararMatriz(x, y);
     if(resultado != true){
