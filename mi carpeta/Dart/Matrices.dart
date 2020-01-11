@@ -1,10 +1,6 @@
 import 'dart:io';
 import 'dart:math';
 
-
-
-
-
 bool validarLosElementosDeLasMatrices(List<List<dynamic>> matriz){
   // Para declarar un for loop:
   for(var i = 0; i < matriz.length; i++){
@@ -107,6 +103,19 @@ bool compararMatrices(List<List<num>> matrizUno, List<List<num>> matrizDos){
 
 main(){
   determinarSiDosMatricesSonIguales();
+}
+
+cambiarElOrdenDeLosElementos(){
+  final matrizUno = [
+    [1,2,3],
+    [4,5,6],
+  ];
+  for(var f = 0; f < matrizUno[0].length; f ++){
+    for(var c = 0; c < matrizUno.length; c++){
+      var elementoActual = matrizUno[f][c];
+    }
+  }
+
 }
 
 determinarSiDosMatricesSonIguales(){

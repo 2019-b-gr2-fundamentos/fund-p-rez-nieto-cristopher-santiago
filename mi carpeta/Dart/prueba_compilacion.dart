@@ -43,20 +43,15 @@ void main(){
   [1,2,3],
   [4,5,6]
 ];
-print(arreglo[0]);
-print(arreglo[1]);
-print(arreglo[0].runtimeType);
-print(arreglo[1].runtimeType);
-var esUnArreglo = 'List<num>' != arreglo[0].runtimeType;
-print(esUnArreglo);
-if(esUnArreglo){
-  print('${arreglo[0]} es un arreglo');
-}else{
-  print('No es un arreglo');
-}
-for(var i = 0; i < arreglo.length; i++){
+
+for(var i = 0; i <= arreglo[0].length; i++){
   var filaActual = arreglo[i];
-  print(arreglo.indexOf(filaActual));
+  for(var j = 0; j <= arreglo.length; j++){
+    var valorActual = filaActual[j];
+    print(valorActual);
+  }
+}
+print('esos son los numeros de la matriz');
 }
 
-}
+
