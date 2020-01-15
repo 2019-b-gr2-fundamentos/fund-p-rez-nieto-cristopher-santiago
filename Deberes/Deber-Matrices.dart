@@ -1,5 +1,3 @@
-import 'dart:io';
-import 'dart:math';
 
 bool validarLosElementosDeLasMatrices(List<List<dynamic>> matriz){
   // Para declarar un for loop:
@@ -177,24 +175,53 @@ print(matrizUno[3]);
   }
 }
 
-main(){
-  cambiarLasDiagonales();
-}
-
 determinarSiDosMatricesSonIguales(){
   final matrizUno = [
     [3,3],
-    [3,2]
+    [3,3]
   ];
   final matrizDos = [
     [3,3],
     [3,3]
   ];
+  print(matrizUno);
+  print(matrizDos);
   var resultado = compararMatrices(matrizUno, matrizDos);
   if(resultado != true){
     print('Las matrices NO son iguales');
   }else{
     print('Las matrices SI son iguales');
   }
+}
+
+sumarFilas(){
+var matriz = [
+  [1,2,3,4],
+  [4,5,6,7],
+  [1,1,1,1]
+];
+var matrizSuma = [];
+var i = 0;
+var j = 0;
+var elemento = 0;
+do{
+  var elementoActual = matriz[j][i];
+  elemento = elemento + elementoActual;
+  if(j == matriz.length - 1){
+    matrizSuma.add(elemento);
+    i = i + 1;
+    j = 0;
+    elemento = 0;
+  }else{
+    j = j + 1;
+  }
+} while (i < matriz[0].length && j < matriz.length);
+print(matrizSuma);
+} 
+
+main(){
+  //determinarSiDosMatricesSonIguales();
+  //sumarFilas();
+  cambiarLasDiagonales();
 }
 

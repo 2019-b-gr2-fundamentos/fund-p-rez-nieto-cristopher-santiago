@@ -16,7 +16,7 @@ sumarLasFilasDeUnaMatriz(){
   }
 }
 */
-
+/*
 void main(){
   List<num> matrizUno = [1,2,3];
   matrizUno.removeAt(0);
@@ -24,10 +24,25 @@ void main(){
   matrizUno.removeAt(2);
   matrizUno.insert(2,1);
   print(matrizUno);
-;
+
+}
+*/
+
+
+functionFibonacci(){
+  var serie = [1,2,3,4,5];
+  var elemento = 0;
+  for(var i = 0; i < serie.length; i++){
+    var elementoActual = serie[i];
+    elemento = elemento + elementoActual;
+    print(elemento);
+  }
+}
 
 
 
+main(){
+  functionFibonacci();
 }
 
   
