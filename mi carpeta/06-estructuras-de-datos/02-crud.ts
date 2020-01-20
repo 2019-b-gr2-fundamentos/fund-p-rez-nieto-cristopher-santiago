@@ -1,11 +1,17 @@
 // 02-crud.ts create read update delete
 // const propmts = require('prompts');
 import * as prompts from 'prompts';
+import { RespuestaEdad } from './Interfaces/respuesta-edad.interface';
+import { RespuestaNombre } from './Interfaces/respuesta-nombre.interface';
 
 function main(){
-    obtenerDatosAnimalPerrito();
+    // npm uninstall -g tsc
+    // npm install -g typescript
+    //obtenerDatosAnimalPerrito(); // ASINCRONA 
+    obtenerDatosAnimalPerritoSincrono()
+    .then()
+    .catch(); //--> PROMESA // SINCRONA  
 }
-
 function obtenerDatosAnimalPerrito(){
     // Paradigma de programacion
     // SINCRONO vs ASINCRONO
@@ -49,6 +55,34 @@ promesaEdad
     console.log('Fin');
 
 
+
+}
+
+async function obtenerDatosAnimalPerritoSincrono(){
+    // Paradigma de programacion
+    // SINCRONO vs ASINCRONO
+    console.log('Inicio');
+    const preguntas = [
+        {
+            type: 'number',
+            name: 'edad',
+            message: 'Puedes darme tu edad?'
+        },
+        {    
+            type: 'text',
+            name: 'nombre',
+            message: 'Puedes darme tu nombre?'
+        },
+        {
+            type: 'text',
+            name: 'cedula',
+            message: 'Puedes darme tu cedula?'
+        }
+    ];
+    const respuestaEdad = await prompts(preguntas);
+    console.log('Respuesta', respuestaEdad);
+
+    console.log('Fin');
 
 }
 main();
