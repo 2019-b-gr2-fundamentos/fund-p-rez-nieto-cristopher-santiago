@@ -1,0 +1,11 @@
+{
+  "name": "deberes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Derber6-splice.js",
+  "scripts": {
+    "marvel": "(tsc Deber-estructuras.ts --target ES5|| echo) && node Deber-estructuras.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
