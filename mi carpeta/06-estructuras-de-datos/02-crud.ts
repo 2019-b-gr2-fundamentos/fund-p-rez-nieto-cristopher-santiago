@@ -80,6 +80,7 @@ async function obtenerDatosAnimalPerritoSincrono(){
         }
     ];
     const respuestaEdad = await prompts(preguntas);
+    
     console.log('Respuesta', respuestaEdad);
 
     console.log('Fin');
