@@ -32,11 +32,17 @@ async function obtenerDatosSuperHeroes(){
     console.log('informacion del personaje', infoDelPersonaje);
 }
 
-function main(){
-     obtenerDatosSuperHeroes()
-     .then()
-     .catch()
-     ;
- }
 
+    //const pregunta3 = await prompts(preguntaLeer);
+    //const pregunta4 = await prompts(preguntaActualizar);
+    //const pregunta5 = await prompts(preguntaEliminar);
+    //const exit = await prompts(salir);
+
+
+
+
+function main(){
+     //obtenerDatosSuperHeroes().then().catch();
+ }
  main();
+

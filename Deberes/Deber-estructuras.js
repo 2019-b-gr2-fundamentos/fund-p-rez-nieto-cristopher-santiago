@@ -79,9 +79,52 @@ function obtenerDatosSuperHeroes() {
         });
     });
 }
+function Crud() {
+    return __awaiter(this, void 0, void 0, function () {
+        var pregunta1, preguntaParaIniciarCrud, preguntaCrear, preguntaLeer, preguntaActualizar, preguntaEliminar;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    pregunta1 = {
+                        type: 'text' || 'number',
+                        name: 'Pregunta1',
+                        message: 'Qué desea hacer ahora? (crear-1, leer, actualizar, eliminar o nada)'
+                    };
+                    return [4 /*yield*/, prompts(pregunta1)];
+                case 1:
+                    preguntaParaIniciarCrud = _a.sent();
+                    preguntaCrear = {
+                        type: 'text',
+                        name: 'Pregunta Crear',
+                        message: 'Desea crear info para otro personaje?'
+                    };
+                    preguntaLeer = {
+                        type: 'text',
+                        name: 'Pregunta Leer',
+                        message: 'Desea leer la info actual?'
+                    };
+                    preguntaActualizar = {
+                        type: 'text',
+                        name: 'Pregunta Actualizar',
+                        message: 'Desea Actualizar la info de su personaje?'
+                    };
+                    preguntaEliminar = {
+                        type: 'text',
+                        name: 'Pregunta Eliminar',
+                        message: 'Desea eliminar la info de algun personaje?'
+                    };
+                    if (!(preguntaParaIniciarCrud == 1)) return [3 /*break*/, 3];
+                    return [4 /*yield*/, prompts(preguntaCrear)];
+                case 2:
+                    _a.sent();
+                    _a.label = 3;
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
+}
 function main() {
-    obtenerDatosSuperHeroes()
-        .then()
-        .catch();
+    //obtenerDatosSuperHeroes().then().catch();
+    Crud().then().catch();
 }
 main();
