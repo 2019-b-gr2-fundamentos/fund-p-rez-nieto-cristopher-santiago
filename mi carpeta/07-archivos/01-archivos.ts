@@ -1,16 +1,78 @@
 import { leerArchivo } from "./02-leer-archivo";
 import { escribirArchivo } from "./03-escribir-archivo";
 import { Estudiante } from "./interfaces/estudiante.interface";
-//import * as prompts from "prompts";
-import * as prompts from "C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts"
+import * as prompts from "C:/Users/USREPS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts";
+//import * as prompts from "C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts"
 
 async function main(){
-    let contador = 1;
+
     const contenidoArchivo = leerArchivo(
         './ejemplo.txt'
     );
     console.log('contenido Archivo:', contenidoArchivo);
-    const arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+
+     // Parsear es transformar de texto a una estructura en memoria
+    /*
+
+    {
+        "nombre": "Adrian"
+    }
+
+
+    <universidad>
+        <facultad></facultad>
+    </universidad>
+
+    */ 
+    let  arregloCargadoDeArchivo; // undefined
+    try{
+       arregloCargadoDeArchivo = JSON
+       .parse(contenidoArchivo);
+    }catch(error){
+        arregloCargadoDeArchivo = [];
+        console.error('Error parseando archivo');
+    }
+
+    let contador = 1;
+    
+    // OPERADORES
+    let minimoId = -1;
+    arregloCargadoDeArchivo
+        .forEach( // NO ENVIAN NADA Y NO SE DEVUELVE NADA
+                // SIRVE SOLO PARA ITERAR 
+            function(valorActual){
+                const idActual = valorActual.id;
+                if(idActual > minimoId){
+                    minimoId = idActual;
+                }
+            }
+        );
+    minimoId = minimoId + 1;
+            contador = minimoId;
+    /*
+    }
+    try{
+        console.log('1');
+        console.log('2');
+        console.log('3');
+        // Syntax Error
+        var a = b;
+        console.log()
+        //throw new Error("EL ARCHIVO ESTA MAL PARSEADO");
+        console.log('4');
+        console.log('5');
+    }catch(error){
+        console.log(error);
+        console.log(':3');
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
     const arregloEstudiantes: Estudiante[] = arregloCargadoDeArchivo;
     const arregloPreguntas = [
         {
@@ -82,23 +144,13 @@ async function main(){
     );
     console.log(estudianteEcontrado);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const arregloTexto = JSON.stringify(arregloEstudiantes);
+    console.log(arregloTexto);
+    escribirArchivo(
+        './ejemplo.txt',
+        arregloTexto
+    );
+    contador = contador + 1;
 
     /*
     const textoLeido = leerArchivo('./ejemplo.txt');
