@@ -36,95 +36,226 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+//import * as prompts from 'C:/Users/USRLAM.LABFIS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts;
 var prompts = require("C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts");
-function obtenerDatosSuperHeroes() {
+var id = 1;
+var Vengadores = [];
+function crearDatosSuperHeroes() {
     return __awaiter(this, void 0, void 0, function () {
-        var infoSuperHeros, infoDelPersonaje;
+        var preguntasVengador, respuestaPreguntas, nuevoRegistroVengador;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    infoSuperHeros = [
+                    preguntasVengador = [
                         {
                             type: 'text',
                             name: 'Nombre',
-                            message: 'Inserte su nombre real'
+                            message: 'Inserte el nombre real del vengador'
                         },
                         {
                             type: 'text',
                             name: 'SuperHeroe',
-                            message: 'Cual es su nombre de Super Heroe'
+                            message: 'Inserte el nombre de super heroe del vengador'
                         },
                         {
-                            type: 'number',
-                            name: 'Universo',
-                            message: 'Universo al que pertenece'
+                            type: 'text',
+                            name: 'Poder',
+                            message: 'Inserte el superpoder del vengador'
                         },
                         {
                             type: 'text',
                             name: 'Grupo',
-                            message: 'Inserte los grupos a los que pertenece'
+                            message: 'Inserte los grupo a los que pertece'
                         },
                         {
                             type: 'text',
-                            name: 'SuperPoder',
-                            message: 'Cual es su superpoder?'
+                            name: 'Ciudad',
+                            message: 'Ciudad natal del vengador'
                         }
                     ];
-                    return [4 /*yield*/, prompts(infoSuperHeros)];
+                    return [4 /*yield*/, prompts(preguntasVengador)];
                 case 1:
-                    infoDelPersonaje = _a.sent();
-                    console.log('informacion del personaje', infoDelPersonaje);
+                    respuestaPreguntas = _a.sent();
+                    nuevoRegistroVengador = {
+                        Aid: id,
+                        Nombre: respuestaPreguntas.Nombre,
+                        SuperHeroe: respuestaPreguntas.SuperHeroe,
+                        SuperPoder: respuestaPreguntas.Poder,
+                        Grupo: respuestaPreguntas.Grupo,
+                        Ciudad: respuestaPreguntas.Ciudad
+                    };
+                    id = id + 1;
+                    Vengadores.push(nuevoRegistroVengador);
+                    queDeseaHacer().then().catch();
                     return [2 /*return*/];
             }
         });
     });
 }
-function Crud() {
+;
+function queDeseaHacer() {
     return __awaiter(this, void 0, void 0, function () {
-        var pregunta1, preguntaParaIniciarCrud, preguntaCrear, preguntaLeer, preguntaActualizar, preguntaEliminar;
+        var preguntas, respuesta1;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    pregunta1 = {
-                        type: 'text' || 'number',
-                        name: 'Pregunta1',
-                        message: 'Qué desea hacer ahora? (crear-1, leer, actualizar, eliminar o nada)'
-                    };
-                    return [4 /*yield*/, prompts(pregunta1)];
+                case 0: return [4 /*yield*/, prompts({
+                        type: 'text',
+                        name: 'respuestas',
+                        message: '¿Que desea hacer? \n 1-crear otro registro \n 2-leer los registros actuales \n 3-actualizar datos \n 4-eliminar registros \n 5-SALIR'
+                    })];
                 case 1:
-                    preguntaParaIniciarCrud = _a.sent();
-                    preguntaCrear = {
-                        type: 'text',
-                        name: 'Pregunta Crear',
-                        message: 'Desea crear info para otro personaje?'
-                    };
-                    preguntaLeer = {
-                        type: 'text',
-                        name: 'Pregunta Leer',
-                        message: 'Desea leer la info actual?'
-                    };
-                    preguntaActualizar = {
-                        type: 'text',
-                        name: 'Pregunta Actualizar',
-                        message: 'Desea Actualizar la info de su personaje?'
-                    };
-                    preguntaEliminar = {
-                        type: 'text',
-                        name: 'Pregunta Eliminar',
-                        message: 'Desea eliminar la info de algun personaje?'
-                    };
-                    if (!(preguntaParaIniciarCrud == 1)) return [3 /*break*/, 3];
-                    return [4 /*yield*/, prompts(preguntaCrear)];
+                    preguntas = _a.sent();
+                    respuesta1 = preguntas.respuestas;
+                    if (respuesta1 == 1) {
+                        crearDatosSuperHeroes().then().catch();
+                    }
+                    else if (respuesta1 == 2) {
+                        leerRegistros().then().catch();
+                    }
+                    else if (respuesta1 == 3) {
+                        editarRegistro().then().catch();
+                    }
+                    else if (respuesta1 == 4) {
+                        eliminarRegistro().then().catch();
+                    }
+                    else if (respuesta1 == 5) {
+                        console.log('ADIOS');
+                    }
+                    else {
+                        console.log('Elija una opcion valida');
+                        queDeseaHacer().then().catch();
+                    }
+                    ;
+                    return [2 /*return*/, preguntas.respuestas];
+            }
+        });
+    });
+}
+;
+function leerRegistros() {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            console.log('Registro de Vengadores:', Vengadores);
+            queDeseaHacer().then().catch();
+            return [2 /*return*/];
+        });
+    });
+}
+;
+function editarRegistro() {
+    return __awaiter(this, void 0, void 0, function () {
+        var AidAEditar, AidEncontrado, queDeseaEditar, respuestaCampo, nuevoNombre, nuevoSuperHeroe, nuevoSuperPoder, nuevoGrupo, nuevaCiudad;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prompts({
+                        type: 'number',
+                        name: 'Aid',
+                        message: 'Ingrese el Aid del Vengador cuya informacion desea editar'
+                    })];
+                case 1:
+                    AidAEditar = _a.sent();
+                    AidEncontrado = Vengadores.findIndex(function (valorActual) {
+                        return valorActual.Aid == AidAEditar.Aid;
+                    });
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'campoAEditar',
+                            message: '¿Que campo desea editar?'
+                        })];
                 case 2:
-                    _a.sent();
-                    _a.label = 3;
-                case 3: return [2 /*return*/];
+                    queDeseaEditar = _a.sent();
+                    respuestaCampo = queDeseaEditar.campoAEditar;
+                    if (!(respuestaCampo == 'Nombre')) return [3 /*break*/, 4];
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'nuevoNombre',
+                            message: 'Ingrese el nombre real del nuevo Vengador'
+                        })];
+                case 3:
+                    nuevoNombre = _a.sent();
+                    Vengadores[AidEncontrado].Nombre = nuevoNombre.nuevoNombre;
+                    return [3 /*break*/, 13];
+                case 4:
+                    if (!(respuestaCampo == 'SuperHeroe')) return [3 /*break*/, 6];
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'nuevoSuper',
+                            message: 'Ingrese el nobre de SuperHeroe del nuevo vengador'
+                        })];
+                case 5:
+                    nuevoSuperHeroe = _a.sent();
+                    Vengadores[AidEncontrado].SuperHeroe = nuevoSuperHeroe.nuevoSuper;
+                    return [3 /*break*/, 13];
+                case 6:
+                    if (!(respuestaCampo == 'SuperPoder')) return [3 /*break*/, 8];
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'nuevoPoder',
+                            message: 'Ingrese el nuevo SuperPoder'
+                        })];
+                case 7:
+                    nuevoSuperPoder = _a.sent();
+                    Vengadores[AidEncontrado].SuperPoder = nuevoSuperPoder.nuevoPoder;
+                    return [3 /*break*/, 13];
+                case 8:
+                    if (!(respuestaCampo == 'Grupo')) return [3 /*break*/, 10];
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'newGroup',
+                            message: 'Ingrese el nuevo grupo al que pertenece el Vengador'
+                        })];
+                case 9:
+                    nuevoGrupo = _a.sent();
+                    Vengadores[AidEncontrado].Grupo = nuevoGrupo.newGroup;
+                    return [3 /*break*/, 13];
+                case 10:
+                    if (!(respuestaCampo == 'Ciudad')) return [3 /*break*/, 12];
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'City',
+                            message: 'Ingrese la nueva ciudad'
+                        })];
+                case 11:
+                    nuevaCiudad = _a.sent();
+                    Vengadores[AidEncontrado].Ciudad = nuevaCiudad.City;
+                    return [3 /*break*/, 13];
+                case 12:
+                    console.log('Ingrese un campo valido');
+                    _a.label = 13;
+                case 13:
+                    ;
+                    console.log('El registro de Vengadores actualizado es:', Vengadores);
+                    queDeseaHacer().then().catch();
+                    return [2 /*return*/, Vengadores];
+            }
+        });
+    });
+}
+;
+function eliminarRegistro() {
+    return __awaiter(this, void 0, void 0, function () {
+        var AidAEliminar, AidEncontrado;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, prompts({
+                        type: 'number',
+                        name: 'Aid',
+                        message: 'Ingrese el Aid del Vengador cuya informacion desea eliminar'
+                    })];
+                case 1:
+                    AidAEliminar = _a.sent();
+                    AidEncontrado = Vengadores.findIndex(function (valorActual) {
+                        return valorActual.Aid == AidAEliminar.Aid;
+                    });
+                    Vengadores.splice(AidEncontrado, 1);
+                    console.log('El nuevo registro de Vengadores es:', Vengadores);
+                    queDeseaHacer().then().catch();
+                    return [2 /*return*/, Vengadores];
             }
         });
     });
 }
 function main() {
-    //obtenerDatosSuperHeroes().then().catch();
-    Crud().then().catch();
+    crearDatosSuperHeroes().then().catch();
 }
 main();
