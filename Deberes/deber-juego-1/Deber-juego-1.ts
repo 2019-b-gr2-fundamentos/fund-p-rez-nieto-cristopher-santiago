@@ -1,10 +1,10 @@
-import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts'
+//import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts'
 const cualuquierNumero = Math.floor(Math.random() * 14) // -> genera un numero random de 0 a 14 // [0 , 14[
 let matrizCorrecta = [
     [1,  2,  3,  4],
     [5,  6,  7,  8],
     [9, 10, 11, 12],
-    [13, 14 , 15, '' ]
+    [13, 14 , 15, '']
 ];
 
 
