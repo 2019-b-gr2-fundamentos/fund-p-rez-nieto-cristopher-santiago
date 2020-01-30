@@ -1,10 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var _02_filter_1 = require("./02-filter");
+var _03_every_1 = require("./03-every");
 function main() {
     var arregloEstudiantes = [
-        { id: 1, nombre: "Adrian", nota: 7 },
+        { id: 1, nombre: "Adrian", nota: 9 },
         { id: 2, nombre: "Vicente", nota: 9 },
-        { id: 3, nombre: "Wendy", nota: 4 },
-        { id: 4, nombre: "Carolina", nota: 10 },
-        { id: 5, nombre: "Carlos", nota: 6.5 },
+        { id: 3, nombre: "Wendy", nota: 9 },
+        { id: 4, nombre: "Carolina", nota: 9 },
+        { id: 5, nombre: "Carlos", nota: 9 },
     ];
     // OPERADOR FOREACH
     // Enviamos -> NADA
@@ -48,7 +52,7 @@ function main() {
     // Recibimos -> BOOLEANO
     var respuestaSome = arregloEstudiantes
         .some(function (valorActual, i, arreglo) {
-        var condicion = valorActual.nota < 4;
+        var condicion = valorActual.nota > 9;
         // CONDICION TRUTY O TRUE
         return condicion;
     });
@@ -78,6 +82,19 @@ function main() {
     console.log('respuestaReduce', respuestaReduce);
     console.log('Promedio:', respuestaReduce / arregloEstudiantes.length);
     console.log('arregloEstudiantes', arregloEstudiantes);
+    var respuestaFilterNuestro = _02_filter_1.filter(arregloEstudiantes, function (valorActual, i, arr) {
+        console.log('Valor: ', valorActual);
+        console.log('Indice: ', i);
+        console.log('Arreglo: ', arr);
+        return valorActual.nota >= 7;
+    });
+    console.log('respuestaFilterNuestro:', respuestaFilterNuestro);
+    console.log('arregloEstudiantes: ', arregloEstudiantes);
+    var respuestaEveryNuestro = _03_every_1.every(arregloEstudiantes, function (valorActual, i, arr) {
+        return valorActual.nota >= 9;
+    });
+    console.log('Regalos: ', respuestaEveryNuestro);
+    console.log('arregloEstudiantes:', arregloEstudiantes);
 }
 ;
 main();
