@@ -89,7 +89,6 @@ function generarPrimeraFila():any {
             j = j + 1;
         };
     }while(j < tamañoDeCadaFila);
-    matrizJuego[3].splice(3,1,'');
     //console.log(matrizJuego);
     console.log(matrizJuego[0]);
     console.log(matrizJuego[1]);
