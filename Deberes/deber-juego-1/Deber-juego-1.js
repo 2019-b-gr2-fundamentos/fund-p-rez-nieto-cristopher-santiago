@@ -1,134 +1,112 @@
 //import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts'
-var cualuquierNumero = Math.floor(Math.random() * 14); // -> genera un numero random de 0 a 14 // [0 , 14[
+//let numero1 = -1;let numero2 = -1;let numero3 = -1;let numero4 = -1; //let numero5 = -1;let numero6 = -1;let numero7 = -1;let numero8 = -1;let numero9 = -1;let numero10 = -1;let numero11 = -1;let numero12 = -1;let numero13 = -1;let numero14 = -1;let numero15 = -1;let numero16 = -1;
 var matrizCorrecta = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
     [13, 14, 15, '']
 ];
-function generarNumeroRandom() {
-    var numero = Math.floor(Math.random() * 15);
-    return numero;
-}
-;
-function generarJuego() {
-    var nuevoNumero = 0;
-    var tamañoDeCadaFila = 4;
-    var matrizJuego = [
-        [],
-        [],
-        [],
-        []
-    ];
-    var numero1 = -1;
-    var numero2 = -1;
-    var numero3 = -1;
-    var numero4 = -1;
-    var numero5 = -1;
-    var numero6 = -1;
-    var numero7 = -1;
-    var numero8 = -1;
-    var numero9 = -1;
-    var numero10 = -1;
-    var numero11 = -1;
-    var numero12 = -1;
-    var numero13 = -1;
-    var numero14 = -1;
-    var numero15 = -1;
-    var numero16 = -1;
-    var i = 0;
-    var j = 0;
-    var numeroAhorita = -1;
+var nuevoNumero = 0;
+var i = 0;
+var j = 0;
+var numeroActual = -1;
+var tamañoDeCadaFila = 4;
+var matrizJuego = [
+    [],
+    [],
+    [],
+    []
+];
+var primeraFila = [];
+var segundaFila = [];
+var terceraFila = [];
+var cuartaFila = [];
+function generarPrimeraFila() {
+    primeraFila = [-1, -1, -1, -1];
     do {
-        nuevoNumero = generarNumeroRandom();
-        if (j == tamañoDeCadaFila) {
-            i = i + 1;
-            j = 0;
+        var numerosAComparar = numeroActual || primeraFila[0] || primeraFila[1] || primeraFila[2] || primeraFila[3];
+        nuevoNumero = Math.floor(Math.random() * 15);
+        if (nuevoNumero == numerosAComparar) {
+            j = j;
         }
         else {
-            if (nuevoNumero != numeroAhorita && numero1 && numero2 && numero3 && numero4 && numero5 && numero6 && numero7 && numero8 && numero9 && numero10 && numero11 && numero12 && numero13 && numero14 && numero15 && numero16) {
-                matrizJuego[i].push(nuevoNumero);
-                numeroAhorita = nuevoNumero;
-                if (j = 0, i = 0) {
-                    numero1 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 1, i = 0) {
-                    numero2 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 2, i = 0) {
-                    numero3 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 3, i = 0) {
-                    numero4 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 0, i = 1) {
-                    numero5 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 1, i = 1) {
-                    numero6 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 2, i = 1) {
-                    numero7 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 3, i = 1) {
-                    numero8 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 0, i = 2) {
-                    numero9 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 1, i = 2) {
-                    numero10 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 2, i = 2) {
-                    numero11 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 3, i = 2) {
-                    numero12 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 0, i = 3) {
-                    numero13 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 1, i = 3) {
-                    numero14 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 2, i = 3) {
-                    numero15 = nuevoNumero;
-                    j = j + 1;
-                }
-                else if (j = 3, i = 3) {
-                    numero16 = nuevoNumero;
-                    j = j + 1;
-                }
-                ;
-            }
-            else {
-                j = j;
-            }
-            ;
+            matrizJuego[0].push(nuevoNumero);
+            numeroActual = nuevoNumero;
+            primeraFila[j] = numeroActual;
+            primeraFila = primeraFila;
+            j = j + 1;
         }
         ;
-    } while (i < tamañoDeCadaFila);
-    matrizJuego[3].splice(3, 1, '');
-    console.log(matrizJuego);
+    } while (j < tamañoDeCadaFila);
+    //console.log(matrizJuego);
+    //console.log(primeraFila)
+    //console.log(numeroActual);
+    j = 0;
+    segundaFila = [-1, -1, -1, -1];
+    do {
+        var numerosAComparar = numeroActual || primeraFila[0] || primeraFila[1] || primeraFila[2] || primeraFila[3]
+            || segundaFila[0] || segundaFila[1] || segundaFila[2] || segundaFila[3];
+        nuevoNumero = Math.floor(Math.random() * 15);
+        if (nuevoNumero == numerosAComparar) {
+            j = j;
+        }
+        else {
+            matrizJuego[1].push(nuevoNumero);
+            numeroActual = nuevoNumero;
+            segundaFila[j] = numeroActual;
+            j = j + 1;
+        }
+        ;
+    } while (j < tamañoDeCadaFila);
+    //console.log(matrizJuego);
+    j = 0;
+    terceraFila = [-1, -1, -1, -1];
+    do {
+        var numerosAComparar = numeroActual || primeraFila[0] || primeraFila[1] || primeraFila[2] || primeraFila[3]
+            || segundaFila[0] || segundaFila[1] || segundaFila[2] || segundaFila[3]
+            || terceraFila[0] || terceraFila[1] || terceraFila[2] || terceraFila[3];
+        nuevoNumero = Math.floor(Math.random() * 15);
+        if (nuevoNumero == numerosAComparar) {
+            j = j;
+        }
+        else {
+            matrizJuego[2].push(nuevoNumero);
+            numeroActual = nuevoNumero;
+            terceraFila[j] = numeroActual;
+            j = j + 1;
+        }
+        ;
+    } while (j < tamañoDeCadaFila);
+    //console.log(matrizJuego);
+    j = 0;
+    cuartaFila = [-1, -1, -1, -1];
+    do {
+        var numerosAComparar = numeroActual || primeraFila[0] || primeraFila[1] || primeraFila[2] || primeraFila[3]
+            || segundaFila[0] || segundaFila[1] || segundaFila[2] || segundaFila[3]
+            || terceraFila[0] || terceraFila[1] || terceraFila[2] || terceraFila[3]
+            || cuartaFila[0] || cuartaFila[1] || cuartaFila[2] || cuartaFila[3];
+        nuevoNumero = Math.floor(Math.random() * 15);
+        if (nuevoNumero == numerosAComparar) {
+            j = j;
+        }
+        else {
+            matrizJuego[3].push(nuevoNumero);
+            numeroActual = nuevoNumero;
+            cuartaFila[j] = numeroActual;
+            j = j + 1;
+        }
+        ;
+    } while (j < tamañoDeCadaFila);
+    //console.log(matrizJuego);
+    console.log(primeraFila);
+    console.log(segundaFila);
+    console.log(terceraFila);
+    console.log(cuartaFila);
 }
 ;
 function main() {
-    generarJuego();
-    //generarNumeroRandom();
+    generarPrimeraFila();
+    //generarSegundaFila();
 }
 ;
 main();
