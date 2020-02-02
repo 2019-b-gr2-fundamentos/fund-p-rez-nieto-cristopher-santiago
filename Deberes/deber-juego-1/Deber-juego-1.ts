@@ -1,4 +1,4 @@
-//import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts'
+import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
 //let numero1 = -1;let numero2 = -1;let numero3 = -1;let numero4 = -1; //let numero5 = -1;let numero6 = -1;let numero7 = -1;let numero8 = -1;let numero9 = -1;let numero10 = -1;let numero11 = -1;let numero12 = -1;let numero13 = -1;let numero14 = -1;let numero15 = -1;let numero16 = -1;
 let matrizCorrecta = [
     [1,  2,  3,  4],
@@ -22,7 +22,7 @@ let segundaFila = [];
 let terceraFila = [];
 let cuartaFila = [];
 
-function generarPrimeraFila():any {
+async function generarJuego(){
     primeraFila = [-1,-1,-1,-1];
     do{
         nuevoNumero = Math.floor(Math.random() * 15);
@@ -73,13 +73,13 @@ function generarPrimeraFila():any {
     }while(j < tamañoDeCadaFila);
     //console.log(matrizJuego);
     j = 0;
-    cuartaFila = [-1,-1,-1,-1];
+    cuartaFila = [-1,-1,-1,''];
     do{
         nuevoNumero = Math.floor(Math.random() * 15);
         if(nuevoNumero == numeroActual || nuevoNumero == primeraFila[0] || nuevoNumero == primeraFila[1] || nuevoNumero == primeraFila[2] || nuevoNumero == primeraFila[3]||
                                           nuevoNumero == segundaFila[0] || nuevoNumero == segundaFila[1] || nuevoNumero == segundaFila[2] || nuevoNumero == segundaFila[3]||
                                           nuevoNumero == terceraFila[0] || nuevoNumero == terceraFila[1] || nuevoNumero == terceraFila[2] || nuevoNumero == terceraFila[3]||
-                                          nuevoNumero == cuartaFila[0]  || nuevoNumero == cuartaFila[1]  || nuevoNumero == cuartaFila[2]  || nuevoNumero == cuartaFila[3]){
+                                          nuevoNumero == cuartaFila[0]  || nuevoNumero == terceraFila[1]){
             j = j;
         }else{
             matrizJuego[3].push(nuevoNumero);
@@ -88,17 +88,20 @@ function generarPrimeraFila():any {
             cuartaFila = cuartaFila;
             j = j + 1;
         };
-    }while(j < tamañoDeCadaFila);
+    }while(j < 4);
+    matrizJuego[3].splice(3,1,'');
     //console.log(matrizJuego);
     console.log(matrizJuego[0]);
     console.log(matrizJuego[1]);
     console.log(matrizJuego[2]);
     console.log(matrizJuego[3]);
+    
+   
 
 };
 
 function main(){
-    generarPrimeraFila();
+    generarJuego().then().catch();
     //generarSegundaFila();
     
 };
