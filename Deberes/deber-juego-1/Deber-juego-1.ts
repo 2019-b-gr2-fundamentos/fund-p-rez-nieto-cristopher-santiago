@@ -7,12 +7,10 @@ let matrizCorrecta = [
     [13, 14 , 15, '']
 ];
 
-
 function generarNumeroRandom(){
     const numero = Math.floor(Math.random() * 15);
     return numero;
 };
-
 
 function generarJuego(){
     let nuevoNumero = 0;

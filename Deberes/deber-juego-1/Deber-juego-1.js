@@ -1,5 +1,4 @@
-"use strict";
-exports.__esModule = true;
+//import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts'
 var cualuquierNumero = Math.floor(Math.random() * 14); // -> genera un numero random de 0 a 14 // [0 , 14[
 var matrizCorrecta = [
     [1, 2, 3, 4],

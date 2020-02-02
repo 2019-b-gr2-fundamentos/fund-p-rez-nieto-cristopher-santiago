@@ -1,1 +1,1 @@
-[{"id":1,"nombre":"Cristopher "},{"id":2,"nombre":"Santiago"},{"id":3,"nombre":"Elver"},{"id":4,"nombre":"Galarga"}]
+[{"id":1,"nombre":"Cristopher "},{"id":2,"nombre":"Santiago"},{"id":3,"nombre":"Elver"},{"id":4,"nombre":"Galarga"},{"id":5,"nombre":"Cristopher"},{"id":6,"nombre":"yo xd"}]

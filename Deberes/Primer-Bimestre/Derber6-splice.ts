@@ -11,7 +11,7 @@
 3) imprimir el nuevo arreglo 
 
 */
-
+/*
 const arreglo = [1,2,3,4];
 const n = arreglo.length; //4
 console.log(arreglo);
@@ -35,4 +35,4 @@ arreglo[n - 1] = arreglo[n];
 arreglo[n] = arreglo[indiceElementoAEliminar];
 arreglo.pop();
 console.log(arreglo);
-
+*/
