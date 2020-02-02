@@ -1,9 +1,26 @@
 //import * as prompts from 'C:/Users/USREPS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
 import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
-//import * as prompts from ''
 import { Vengador } from './Interfaces/vengadores.interfaces';
-let id = 1;
-let Vengadores: Vengador[] = [];
+import { leerArchivo } from '../../mi carpeta/07-archivos/02-leer-archivo';
+import { escribirArchivo } from '../../mi carpeta/07-archivos/03-escribir-archivo';
+import { eliminarArchivo } from '../../mi carpeta/07-archivos/04-eliminar-archivos';
+
+let id = 0;
+const contenidoArchivo = leerArchivo('./registro-vengadores.txt');
+let arregloVengadoresCargadoDeArchivo = JSON.parse(contenidoArchivo);
+let minimoAid = 0;
+    arregloVengadoresCargadoDeArchivo
+        .forEach(
+            function(valorActual){
+                const idActual = valorActual.Aid;
+                if(idActual > minimoAid){
+                    minimoAid = idActual;
+                }
+            }
+        );
+    minimoAid = minimoAid + 1;
+            id = minimoAid;
+let Vengadores: Vengador[] = arregloVengadoresCargadoDeArchivo;
 
 async function crearDatosSuperHeroes(){
     const preguntasVengador = [
@@ -44,6 +61,8 @@ async function crearDatosSuperHeroes(){
     };
     id = id + 1;
     Vengadores.push(nuevoRegistroVengador);
+    const arregloParseado = JSON.stringify(Vengadores);
+    escribirArchivo('./registro-vengadores.txt', arregloParseado);
     queDeseaHacer().then().catch();
 
 };
@@ -75,7 +94,7 @@ async function queDeseaHacer(){
     return preguntas.respuestas;
 };
 async function leerRegistros(){
-    console.log('Registro de Vengadores:', Vengadores);
+    console.log('El archivo cuenta con el siguiente registro: \n', Vengadores);
     queDeseaHacer().then().catch();
 };
 async function editarRegistro(){
@@ -134,6 +153,8 @@ async function editarRegistro(){
         console.log('Ingrese un campo valido');
     };
     console.log('El registro de Vengadores actualizado es:', Vengadores);
+    const nuevoRegistroStringificado = JSON.stringify(Vengadores);
+    escribirArchivo('./registro-vengadores.txt', nuevoRegistroStringificado);
     queDeseaHacer().then().catch();
     return Vengadores
 };
@@ -148,11 +169,13 @@ async function eliminarRegistro(){
         return valorActual.Aid == AidAEliminar.Aid
         }
     );
-    Vengadores.splice(AidEncontrado, 1);
+    Vengadores.splice(AidEncontrado, 1); 
+    const registroBorrado = JSON.stringify(Vengadores);
+    escribirArchivo('./registro-vengadores.txt', registroBorrado);
     console.log('El nuevo registro de Vengadores es:', Vengadores);
     queDeseaHacer().then().catch();
     return Vengadores
-}
+};
 
 function main(){
     crearDatosSuperHeroes().then().catch();

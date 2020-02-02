@@ -38,11 +38,25 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //import * as prompts from 'C:/Users/USREPS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
 var prompts = require("C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts");
-var id = 1;
-var Vengadores = [];
+var _02_leer_archivo_1 = require("../../mi carpeta/07-archivos/02-leer-archivo");
+var _03_escribir_archivo_1 = require("../../mi carpeta/07-archivos/03-escribir-archivo");
+var id = 0;
+var contenidoArchivo = _02_leer_archivo_1.leerArchivo('./registro-vengadores.txt');
+var arregloVengadoresCargadoDeArchivo = JSON.parse(contenidoArchivo);
+var minimoAid = 0;
+arregloVengadoresCargadoDeArchivo
+    .forEach(function (valorActual) {
+    var idActual = valorActual.Aid;
+    if (idActual > minimoAid) {
+        minimoAid = idActual;
+    }
+});
+minimoAid = minimoAid + 1;
+id = minimoAid;
+var Vengadores = arregloVengadoresCargadoDeArchivo;
 function crearDatosSuperHeroes() {
     return __awaiter(this, void 0, void 0, function () {
-        var preguntasVengador, respuestaPreguntas, nuevoRegistroVengador;
+        var preguntasVengador, respuestaPreguntas, nuevoRegistroVengador, arregloParseado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -86,6 +100,8 @@ function crearDatosSuperHeroes() {
                     };
                     id = id + 1;
                     Vengadores.push(nuevoRegistroVengador);
+                    arregloParseado = JSON.stringify(Vengadores);
+                    _03_escribir_archivo_1.escribirArchivo('./registro-vengadores.txt', arregloParseado);
                     queDeseaHacer().then().catch();
                     return [2 /*return*/];
             }
@@ -135,7 +151,7 @@ function queDeseaHacer() {
 function leerRegistros() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
-            console.log('Registro de Vengadores:', Vengadores);
+            console.log('El archivo cuenta con el siguiente registro: \n', Vengadores);
             queDeseaHacer().then().catch();
             return [2 /*return*/];
         });
@@ -144,7 +160,7 @@ function leerRegistros() {
 ;
 function editarRegistro() {
     return __awaiter(this, void 0, void 0, function () {
-        var AidAEditar, AidEncontrado, queDeseaEditar, respuestaCampo, nuevoNombre, nuevoSuperHeroe, nuevoSuperPoder, nuevoGrupo, nuevaCiudad;
+        var AidAEditar, AidEncontrado, queDeseaEditar, respuestaCampo, nuevoNombre, nuevoSuperHeroe, nuevoSuperPoder, nuevoGrupo, nuevaCiudad, nuevoRegistroStringificado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, prompts({
@@ -225,6 +241,8 @@ function editarRegistro() {
                 case 13:
                     ;
                     console.log('El registro de Vengadores actualizado es:', Vengadores);
+                    nuevoRegistroStringificado = JSON.stringify(Vengadores);
+                    _03_escribir_archivo_1.escribirArchivo('./registro-vengadores.txt', nuevoRegistroStringificado);
                     queDeseaHacer().then().catch();
                     return [2 /*return*/, Vengadores];
             }
@@ -234,7 +252,7 @@ function editarRegistro() {
 ;
 function eliminarRegistro() {
     return __awaiter(this, void 0, void 0, function () {
-        var AidAEliminar, AidEncontrado;
+        var AidAEliminar, AidEncontrado, registroBorrado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, prompts({
@@ -248,6 +266,8 @@ function eliminarRegistro() {
                         return valorActual.Aid == AidAEliminar.Aid;
                     });
                     Vengadores.splice(AidEncontrado, 1);
+                    registroBorrado = JSON.stringify(Vengadores);
+                    _03_escribir_archivo_1.escribirArchivo('./registro-vengadores.txt', registroBorrado);
                     console.log('El nuevo registro de Vengadores es:', Vengadores);
                     queDeseaHacer().then().catch();
                     return [2 /*return*/, Vengadores];
@@ -255,6 +275,7 @@ function eliminarRegistro() {
         });
     });
 }
+;
 function main() {
     crearDatosSuperHeroes().then().catch();
 }
