@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-//let numero1 = -1;let numero2 = -1;let numero3 = -1;let numero4 = -1; //let numero5 = -1;let numero6 = -1;let numero7 = -1;let numero8 = -1;let numero9 = -1;let numero10 = -1;let numero11 = -1;let numero12 = -1;let numero13 = -1;let numero14 = -1;let numero15 = -1;let numero16 = -1;
 var matrizCorrecta = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
@@ -137,14 +136,16 @@ function generarJuego() {
             } while (j < 4);
             matrizJuego[3].splice(3, 1, '');
             //console.log(matrizJuego);
-            console.log(matrizJuego[0]);
-            console.log(matrizJuego[1]);
-            console.log(matrizJuego[2]);
-            console.log(matrizJuego[3]);
+            console.log('#  ', '1  ', '2  ', '3  ', '4  ');
+            console.log('A', matrizJuego[0]);
+            console.log('B', matrizJuego[1]);
+            console.log('C', matrizJuego[2]);
+            console.log('D', matrizJuego[3]);
             return [2 /*return*/];
         });
     });
 }
+exports.generarJuego = generarJuego;
 ;
 function main() {
     generarJuego().then().catch();

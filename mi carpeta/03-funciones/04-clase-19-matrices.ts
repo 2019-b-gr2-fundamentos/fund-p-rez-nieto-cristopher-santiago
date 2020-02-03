@@ -6,7 +6,7 @@ const arregloMatriz = [
     [],
 ];
 
-function compararMatriz(
+export function compararMatriz(
     matrizUno: number[][],
     matrizDos: number[][]
 ): boolean {
@@ -25,7 +25,7 @@ function compararMatriz(
     }
 }
 
-function tienenMismosValores(
+export function tienenMismosValores(
     matrizUno: number[][],
     matrizDos: number[][]
 ):boolean{
@@ -44,7 +44,7 @@ function tienenMismosValores(
     return banderaSonIguales;
 }
 
-function tienenMatricesIgualesDimensiones(
+export function tienenMatricesIgualesDimensiones(
     matrizUno: number[][],
     matrizDos: number[][]
 ): boolean {
@@ -77,7 +77,7 @@ function tienenMatricesIgualesDimensiones(
     }
 }
 
-function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
+export function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
     // VALIDACIONES
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
     if(esValido){
@@ -88,7 +88,7 @@ function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
     }
 }
 
-function obtenerSegundaDimension(matrizUno: number[][]): number | boolean{
+export function obtenerSegundaDimension(matrizUno: number[][]): number | boolean{
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
     if(esValido){
         let longitudActualMaxima = 0; // Auxiliar
@@ -117,7 +117,7 @@ function obtenerSegundaDimension(matrizUno: number[][]): number | boolean{
     }
 }
 
-function verificarTodosLosElementosDeUnArregloSonArreglo(
+export function verificarTodosLosElementosDeUnArregloSonArreglo(
     arreglo: any[]
 ):boolean{
     for(let i = 0; i < arreglo.length; i++){

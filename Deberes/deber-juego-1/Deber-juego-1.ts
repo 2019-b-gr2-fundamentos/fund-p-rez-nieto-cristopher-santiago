@@ -1,5 +1,4 @@
-import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
-//let numero1 = -1;let numero2 = -1;let numero3 = -1;let numero4 = -1; //let numero5 = -1;let numero6 = -1;let numero7 = -1;let numero8 = -1;let numero9 = -1;let numero10 = -1;let numero11 = -1;let numero12 = -1;let numero13 = -1;let numero14 = -1;let numero15 = -1;let numero16 = -1;
+
 let matrizCorrecta = [
     [1,  2,  3,  4],
     [5,  6,  7,  8],
@@ -22,7 +21,8 @@ let segundaFila = [];
 let terceraFila = [];
 let cuartaFila = [];
 
-async function generarJuego(){
+
+export async function generarJuego(){
     primeraFila = [-1,-1,-1,-1];
     do{
         nuevoNumero = Math.floor(Math.random() * 15);
@@ -91,10 +91,11 @@ async function generarJuego(){
     }while(j < 4);
     matrizJuego[3].splice(3,1,'');
     //console.log(matrizJuego);
-    console.log(matrizJuego[0]);
-    console.log(matrizJuego[1]);
-    console.log(matrizJuego[2]);
-    console.log(matrizJuego[3]);
+    console.log('#  ', '1  ', '2  ', '3  ', '4  ');
+    console.log('A', matrizJuego[0]);
+    console.log('B', matrizJuego[1]);
+    console.log('C', matrizJuego[2]);
+    console.log('D', matrizJuego[3]);
     
    
 
