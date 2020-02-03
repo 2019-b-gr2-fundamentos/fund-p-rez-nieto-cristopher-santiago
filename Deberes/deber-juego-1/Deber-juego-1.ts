@@ -1,9 +1,11 @@
+import * as prompts from 'C:/Users/USRLAM.LABFIS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/07-archivos/node_modules/prompts';
+import { preguntarMoverFicha } from "./pregunta-mover-ficha";
 
 let matrizCorrecta = [
     [1,  2,  3,  4],
     [5,  6,  7,  8],
     [9, 10, 11, 12],
-    [13, 14 , 15, '']
+    [13, 14 , 15, '.']
 ];
 let nuevoNumero = 0;
 let i = 0;
@@ -89,22 +91,38 @@ export async function generarJuego(){
             j = j + 1;
         };
     }while(j < 4);
-    matrizJuego[3].splice(3,1,'');
+    matrizJuego[3].splice(3,1,'.');
     //console.log(matrizJuego);
     console.log('#  ', '1  ', '2  ', '3  ', '4  ');
     console.log('A', matrizJuego[0]);
     console.log('B', matrizJuego[1]);
     console.log('C', matrizJuego[2]);
     console.log('D', matrizJuego[3]);
+
+    const aux1 = matrizJuego[3][3];
+    const aux2 = matrizJuego[3][2];
+    const aux3 = matrizJuego[2][3];
     
-   
+
+    const fichaAMover = await preguntarMoverFicha().then().catch();
+    console.log(fichaAMover);
+    if(fichaAMover == 'D3'){
+        matrizJuego[3][3] = aux2;
+        matrizJuego[3][2] = aux1;
+        console.log(matrizJuego);
+    }else if (fichaAMover == 'C4'){
+        matrizJuego[3][3] = aux3;
+        matrizJuego[2][3] = aux1;
+        console.log(matrizJuego);
+    };
+   return matrizJuego;
 
 };
 
+
 function main(){
     generarJuego().then().catch();
-    //generarSegundaFila();
-    
+
 };
 
 main();
