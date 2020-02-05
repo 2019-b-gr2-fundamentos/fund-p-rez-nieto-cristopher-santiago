@@ -433,7 +433,7 @@ async function moverFicha(){
         }else{
         moverFicha().then().catch();
         }
-    }else if (fichaAMover == 'C3' || fichaAMover == 'c3' && espacioEnBlanco == 2){
+    }else if (fichaAMover == 'C3' || fichaAMover == 'c3' && matrizJuego[2][3] == 'x'){
         matrizJuego[2][3] = auxC3;
         matrizJuego[2][2] = auxC4;
         espacioEnBlanco = matrizJuego[2].indexOf(matrizJuego[2][2]);
