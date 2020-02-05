@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var arregloMatriz = [
     [1, 2],
     [3, 4, 5],
@@ -15,6 +17,7 @@ function compararMatriz(matrizUno, matrizDos) {
         return false;
     }
 }
+exports.compararMatriz = compararMatriz;
 function tienenMismosValores(matrizUno, matrizDos) {
     var primeraDimension = matrizUno.length;
     var segundaDimension = matrizUno[0].length;
@@ -30,6 +33,7 @@ function tienenMismosValores(matrizUno, matrizDos) {
     }
     return banderaSonIguales;
 }
+exports.tienenMismosValores = tienenMismosValores;
 function tienenMatricesIgualesDimensiones(matrizUno, matrizDos) {
     var matrizUnoPrimeraDimension = obtenerPrimeraDimension(matrizUno);
     var matrizUnoSegundaDimension = obtenerSegundaDimension(matrizUno);
@@ -53,6 +57,7 @@ function tienenMatricesIgualesDimensiones(matrizUno, matrizDos) {
         return false;
     }
 }
+exports.tienenMatricesIgualesDimensiones = tienenMatricesIgualesDimensiones;
 function obtenerPrimeraDimension(matrizUno) {
     // VALIDACIONES
     var esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
@@ -64,6 +69,7 @@ function obtenerPrimeraDimension(matrizUno) {
         return false;
     }
 }
+exports.obtenerPrimeraDimension = obtenerPrimeraDimension;
 function obtenerSegundaDimension(matrizUno) {
     var esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
     if (esValido) {
@@ -95,6 +101,7 @@ function obtenerSegundaDimension(matrizUno) {
         return false;
     }
 }
+exports.obtenerSegundaDimension = obtenerSegundaDimension;
 function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo) {
     for (var i = 0; i < arreglo.length; i++) {
         var elementoActual = arreglo[i];
@@ -106,6 +113,7 @@ function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo) {
     }
     return true;
 }
+exports.verificarTodosLosElementosDeUnArregloSonArreglo = verificarTodosLosElementosDeUnArregloSonArreglo;
 function main() {
     var x = [
         [1, 2, 3],

@@ -7,8 +7,8 @@ const arregloMatriz = [
 ];
 
 export function compararMatriz(
-    matrizUno: number[][],
-    matrizDos: number[][]
+    matrizUno: any[][],
+    matrizDos: any[][]
 ): boolean {
     const esValido = tienenMatricesIgualesDimensiones(
         matrizUno,
@@ -26,8 +26,8 @@ export function compararMatriz(
 }
 
 export function tienenMismosValores(
-    matrizUno: number[][],
-    matrizDos: number[][]
+    matrizUno: any[][],
+    matrizDos: any[][]
 ):boolean{
     const primeraDimension = matrizUno.length;
     const segundaDimension = matrizUno[0].length;
@@ -77,7 +77,7 @@ export function tienenMatricesIgualesDimensiones(
     }
 }
 
-export function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
+export function obtenerPrimeraDimension(matrizUno: any[][]): number | boolean{
     // VALIDACIONES
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
     if(esValido){
@@ -88,7 +88,7 @@ export function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean
     }
 }
 
-export function obtenerSegundaDimension(matrizUno: number[][]): number | boolean{
+export function obtenerSegundaDimension(matrizUno: any[][]): number | boolean{
     const esValido = verificarTodosLosElementosDeUnArregloSonArreglo(matrizUno);
     if(esValido){
         let longitudActualMaxima = 0; // Auxiliar
