@@ -1,20 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function some(arreglo, funcion) {
-    var condicion = true;
+    var condicion = false;
     for (var i = 0; i < arreglo.length; i++) {
-        var respuestaFuncion = funcion(arreglo[i], // -> valorActual
-        i, // -> Indice
-        arreglo);
+        var respuestaFuncion = funcion(arreglo[i]);
         if (respuestaFuncion != true) {
             condicion = false;
-            return condicion;
         }
         else {
+            condicion = true;
             return condicion;
         }
+        ;
     }
     ;
+    return condicion;
 }
 exports.some = some;
 ;
