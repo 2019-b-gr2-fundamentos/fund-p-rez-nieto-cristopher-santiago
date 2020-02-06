@@ -1,1 +1,1 @@
-[{"Aid":1,"Nombre":"r","SuperHeroe":"r","SuperPoder":"r","Grupo":"r","Ciudad":"r"},{"Aid":3,"Nombre":"w","SuperHeroe":"w","SuperPoder":"w","Grupo":"w","Ciudad":"w"},{"Aid":4,"Nombre":"P","SuperHeroe":"P","SuperPoder":"P","Grupo":"P","Ciudad":"P"}]
+[{"Aid":2,"Nombre":"FFFF","SuperHeroe":"s","SuperPoder":"s","Grupo":"s","Ciudad":"s"}]

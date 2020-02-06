@@ -2,12 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var _02_filter_1 = require("./02-filter");
 var _03_every_1 = require("./03-every");
+var _05_map_1 = require("./05-map");
+var _04_some_1 = require("./04-some");
+var _07_forEach_1 = require("./07-forEach");
+var _06_reduce_1 = require("./06-reduce");
 function main() {
     var arregloEstudiantes = [
-        { id: 1, nombre: "Adrian", nota: 9 },
-        { id: 2, nombre: "Vicente", nota: 9 },
-        { id: 3, nombre: "Wendy", nota: 9 },
-        { id: 4, nombre: "Carolina", nota: 9 },
+        { id: 1, nombre: "Adrian", nota: 2 },
+        { id: 2, nombre: "Vicente", nota: 5 },
+        { id: 3, nombre: "Wendy", nota: 7 },
+        { id: 4, nombre: "Carolina", nota: 8 },
         { id: 5, nombre: "Carlos", nota: 9 },
     ];
     // OPERADOR FOREACH
@@ -93,7 +97,33 @@ function main() {
     var respuestaEveryNuestro = _03_every_1.every(arregloEstudiantes, function (valorActual, i, arr) {
         return valorActual.nota >= 9;
     });
-    console.log('Regalos: ', respuestaEveryNuestro);
+    console.log('respuestaEveryNuestro:', respuestaEveryNuestro);
+    console.log('arregloEstudiantes:', arregloEstudiantes);
+    var respuestaMapNuestro = _05_map_1.map(arregloEstudiantes, function (valorActual, i, arr) {
+        return {
+            id: valorActual.id,
+            nombre: valorActual.nombre,
+            nota: valorActual.nota,
+            nota20: valorActual.nota * 2
+        };
+    });
+    console.log('respuestasMapNuestro:', respuestaMapNuestro);
+    console.log('arregloEstudiantes:', arregloEstudiantes);
+    var respuestaSomeNuestro = _04_some_1.some(arregloEstudiantes, function (valorActual, i, arr) {
+        return valorActual.nota > 9;
+    });
+    console.log('respuestaSomeNuestro:', respuestaSomeNuestro);
+    console.log('arregloEstudiantes:', arregloEstudiantes);
+    var respuestaForEachNuestro = _07_forEach_1.forEach(arregloEstudiantes, function (valorActual, i, arr) {
+        console.log(valorActual.nota);
+    });
+    console.log('respuestaForEachNuestro:', respuestaForEachNuestro);
+    console.log('arregloEstudiantes:', arregloEstudiantes);
+    var respuestaReduceNuestro = _06_reduce_1.reduce(arregloEstudiantes, function (acumulador, valorActual) {
+        return acumulador + valorActual.nota;
+    });
+    console.log('respuestaReduceNuestro:', respuestaReduceNuestro);
+    console.log('Promedio:', respuestaReduceNuestro / arregloEstudiantes.length);
     console.log('arregloEstudiantes:', arregloEstudiantes);
 }
 ;

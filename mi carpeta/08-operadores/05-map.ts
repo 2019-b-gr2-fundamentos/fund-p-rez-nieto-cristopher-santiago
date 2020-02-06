@@ -15,6 +15,6 @@ export function map(
             [...arreglo], // Clon del clon para que juegue el programador 
         );
         nuevoArreglo.push(respuestaFuncion);
-    }
+    };
     return nuevoArreglo;
 }
