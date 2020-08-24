@@ -38,8 +38,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //import * as prompts from 'C:/Users/USRLAM.LABFIS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/07-archivos/node_modules/prompts';
 //import * as prompts from 'C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/mi carpeta/06-estructuras-de-datos/node_modules/prompts';
-//import { preguntarMoverFicha } from "C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/Deberes/deber-juego-1/funciones-mover-fichas/pregunta-mover-ficha";
-var pregunta_mover_ficha_1 = require("C:/Users/USREPS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/Deberes/deber-juego-1/funciones-mover-fichas/pregunta-mover-ficha");
+var pregunta_mover_ficha_1 = require("C:/Users/sampe_000/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/Deberes/deber-juego-1/funciones-mover-fichas/pregunta-mover-ficha");
+//import { preguntarMoverFicha } from "C:/Users/USREPS/Documents/GitHub/fund-p-rez-nieto-cristopher-santiago/Deberes/deber-juego-1/funciones-mover-fichas/pregunta-mover-ficha"
 var _04_clase_19_matrices_1 = require("../../mi carpeta/03-funciones/04-clase-19-matrices");
 var matrizCorrecta = [
     [0, 1, 2, 3],
@@ -923,7 +923,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A3' || fichaAMover == 'a3' && matrizJuego[0][3] == 'x') {
                         matrizJuego[0][3] = auxA3;
                         matrizJuego[0][2] = auxA4;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][2]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -941,7 +940,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A3' || fichaAMover == 'a3' && matrizJuego[1][2] == 'x') {
                         matrizJuego[1][2] = auxA3;
                         matrizJuego[0][2] = auxB3;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][2]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -959,7 +957,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A3' || fichaAMover == 'a3' && matrizJuego[0][1] == 'x') {
                         matrizJuego[0][1] = auxA3;
                         matrizJuego[0][2] = auxA2;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][2]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -977,7 +974,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A2' || fichaAMover == 'a2' && matrizJuego[0][2] == 'x') {
                         matrizJuego[0][2] = auxA2;
                         matrizJuego[0][1] = auxA3;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][1]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -995,7 +991,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A2' || fichaAMover == 'a2' && matrizJuego[1][1] == 'x') {
                         matrizJuego[1][1] = auxA2;
                         matrizJuego[0][1] = auxB2;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][1]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -1013,7 +1008,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A2' || fichaAMover == 'a2' && matrizJuego[0][0] == 'x') {
                         matrizJuego[0][0] = auxA2;
                         matrizJuego[0][1] = auxA1;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][1]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -1031,7 +1025,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A1' || fichaAMover == 'a1' && matrizJuego[1][0] == 'x') {
                         matrizJuego[1][0] = auxA1;
                         matrizJuego[0][0] = auxB1;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][0]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
@@ -1049,7 +1042,6 @@ function moverFicha() {
                     else if (fichaAMover == 'A1' || fichaAMover == 'a1' && matrizJuego[0][1] == 'x') {
                         matrizJuego[0][1] = auxA1;
                         matrizJuego[0][0] = auxA2;
-                        espacioEnBlanco = matrizJuego[0].indexOf(matrizJuego[0][0]);
                         console.log('#  ', '1  ', '2  ', '3  ', '4  ');
                         console.log('A', matrizJuego[0]);
                         console.log('B', matrizJuego[1]);
